@@ -38,15 +38,7 @@ class PancakHouseCollectionTests: XCTestCase {
     
     func testAddable() {
         //given
-        let dict: [String: Any] = ["name": "Test Pancake House",
-                                   "priceGuide": 1,
-                                   "rating": 1,
-                                   "details": "Test"]
-        
-        guard let houses = PancakeHouse(dictionary: dict) else {
-            XCTAssert(false, "Empty houses")
-            return
-        }
+        let houses = givenNewPancakeHouses()
         
         //when
         collection.addPancakeHouse(houses)
@@ -58,7 +50,6 @@ class PancakHouseCollectionTests: XCTestCase {
     func testRemoveable() {
         //given
         let lastone = collection[collection.count - 1]
-        
         //when
         do {
             try collection.removePancakeHouse(lastone)
@@ -68,6 +59,67 @@ class PancakHouseCollectionTests: XCTestCase {
         }
         
         XCTAssertFalse(collection._pancakeHouses.contains(lastone), "remve failed")
+    }
+    
+    func testMeasureLoadDefaultPancakeHouses() {
+        measure {
+            self.collection.loadDefaultPancakeHouses()
+        }
+    }
+    
+    func testElementIsFavoritePancake() {
+        //given
+        let element = collection[0]
+        let otherElement = collection[1]
+        XCTAssertFalse(collection.isFavorite(element))
+        //when
+        collection.favorite = element
+        //then
+        XCTAssertTrue(collection.isFavorite(element))
+        XCTAssertFalse(collection.isFavorite(otherElement))
+    }
+    
+    func testOutElementIsNotFavoritePancake() {
+        let houses = givenNewPancakeHouses()
+        //given
+        XCTAssertFalse(collection.isFavorite(houses))
+        //when
+        collection.favorite = houses
+        //then
+        XCTAssertNil(collection.favorite)
+        XCTAssertFalse(collection.isFavorite(houses), "favorite pancake is the element of collections")
+    }
+    
+    func testRemoveFavoritePancakeHouses() {
+        //given
+        let house = collection[0]
+        //when
+        collection.favorite = house
+        //then
+        XCTAssertTrue(collection.isFavorite(house))
+        XCTAssertThrowsError(try collection.removePancakeHouse(house), "Should not be allowned to remove favorite pancake house") {
+            let error = $0 as! PancakseHouseError
+            XCTAssertEqual(error, PancakseHouseError.triedToRemoveFavoritePancakeHouse)
+        }
+    }
+    
+    func testRemoveUnknowPancakeHouses() {
+        //given
+        let house = givenNewPancakeHouses()
+        
+        //then
+        XCTAssertThrowsError(try collection.removePancakeHouse(house), "Should not be allowned to remove unknow pancake house") {
+            let error = $0 as! PancakseHouseError
+            XCTAssertEqual(error, PancakseHouseError.triedToRemoveUnknownPancakeHouse)
+        }
+    }
+    
+    func givenNewPancakeHouses() -> PancakeHouse {
+        let dict: [String: Any] = ["name": "Test Pancake House",
+                                   "priceGuide": 1,
+                                   "rating": 1,
+                                   "details": "Test"]
+        return PancakeHouse(dictionary: dict)!
     }
     
     func verifyPancakeHousesHaseExpetedValues(index: Int) {
