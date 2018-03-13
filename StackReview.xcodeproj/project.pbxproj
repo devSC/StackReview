@@ -28,6 +28,9 @@
 		42AFF7451D98696300DF841D /* CloudNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AFF7441D98696300DF841D /* CloudNetworkError.swift */; };
 		787C1FC91BB3AC5E000B7EA1 /* PancakeHouseCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787C1FC81BB3AC5E000B7EA1 /* PancakeHouseCollection.swift */; };
 		C838FED12057A3710075B989 /* PancakeHouseCollectionIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C838FED02057A3710075B989 /* PancakeHouseCollectionIntegrationTests.swift */; };
+		C838FED32057AC830075B989 /* MockCloudNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C838FED22057AC830075B989 /* MockCloudNetworkService.swift */; };
+		C838FED42057ADA90075B989 /* MockCloudNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C838FED22057AC830075B989 /* MockCloudNetworkService.swift */; };
+		C838FED62057AEE80075B989 /* test_pancake_houses.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE38BE6A2056B90600514F57 /* test_pancake_houses.plist */; };
 		FE38BE5E2056B7BC00514F57 /* StackReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE38BE5D2056B7BC00514F57 /* StackReviewTests.swift */; };
 		FE38BE692056B86100514F57 /* PancakHouseCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE38BE682056B86100514F57 /* PancakHouseCollectionTests.swift */; };
 		FE38BE6B2056B90600514F57 /* test_pancake_houses.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE38BE6A2056B90600514F57 /* test_pancake_houses.plist */; };
@@ -78,6 +81,7 @@
 		C838FEC42057A29F0075B989 /* StackReviewIntergationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackReviewIntergationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C838FEC82057A29F0075B989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C838FED02057A3710075B989 /* PancakeHouseCollectionIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PancakeHouseCollectionIntegrationTests.swift; sourceTree = "<group>"; };
+		C838FED22057AC830075B989 /* MockCloudNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCloudNetworkService.swift; sourceTree = "<group>"; };
 		FE38BE5B2056B7BC00514F57 /* StackReviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackReviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE38BE5D2056B7BC00514F57 /* StackReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackReviewTests.swift; sourceTree = "<group>"; };
 		FE38BE5F2056B7BD00514F57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -225,8 +229,9 @@
 		C838FEC52057A29F0075B989 /* StackReviewIntergationTests */ = {
 			isa = PBXGroup;
 			children = (
-				C838FECF2057A3360075B989 /* Support Files */,
 				C838FECE2057A32F0075B989 /* Cases */,
+				C838FED72057AF270075B989 /* Mocks */,
+				C838FECF2057A3360075B989 /* Support Files */,
 			);
 			path = StackReviewIntergationTests;
 			sourceTree = "<group>";
@@ -245,6 +250,14 @@
 				C838FEC82057A29F0075B989 /* Info.plist */,
 			);
 			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		C838FED72057AF270075B989 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C838FED22057AC830075B989 /* MockCloudNetworkService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		FE38BE5C2056B7BC00514F57 /* StackReviewTests */ = {
@@ -404,6 +417,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C838FED62057AEE80075B989 /* test_pancake_houses.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C838FED32057AC830075B989 /* MockCloudNetworkService.swift in Sources */,
 				C838FED12057A3710075B989 /* PancakeHouseCollectionIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE38BE692056B86100514F57 /* PancakHouseCollectionTests.swift in Sources */,
+				C838FED42057ADA90075B989 /* MockCloudNetworkService.swift in Sources */,
 				FE38BE5E2056B7BC00514F57 /* StackReviewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

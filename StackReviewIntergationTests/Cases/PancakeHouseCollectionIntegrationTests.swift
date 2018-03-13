@@ -32,4 +32,19 @@ class PancakeHouseCollectionIntegrationTests: XCTestCase {
         //then
         waitForExpectations(timeout: 3.0, handler: nil)
     }
+    
+    func testGivenMockCloudNetworkServiceLoadPancakesFromCloudSuccess() {
+        //given
+        let mockCloudNetworkService = MockCloudNetworkService()
+        collections._cloudNetworkManager = mockCloudNetworkService
+        let expections = self.expectation(description: "Expected load pancakes from cloud to succeed")
+        //when
+        collections.loadPancakesFromCloud { (didRecievedData) in
+            expections.fulfill()
+            XCTAssertTrue(didRecievedData)
+            XCTAssertEqual(self.collections._pancakeHouses, mockCloudNetworkService.pancakeHouses)
+        }
+        //then
+        waitForExpectations(timeout: 0.1, handler: nil)
+    }
 }

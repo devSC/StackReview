@@ -26,7 +26,7 @@ public class PancakeHouseCollection {
   
   // MARK: - Injected Properties
   
-  internal var _cloudNetworkManager: CloudNetworkManager = CloudNetworkManager()
+  internal var _cloudNetworkManager: CloudNetworkService = CloudNetworkManager()
   
   // MARK: - Internal Properties
   
