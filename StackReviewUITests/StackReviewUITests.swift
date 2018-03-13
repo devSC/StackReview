@@ -36,7 +36,9 @@ class StackReviewUITests: XCTestCase {
         let aboutButton = app.navigationBars.buttons["About"]
         aboutButton.tap()
         
-        let aboutTitleText = app.navigationBars.staticTexts["About"].firstMatch
+        let navigationBar = app.navigationBars["About"].firstMatch
+        let aboutTitleText = navigationBar.otherElements["About"]
+        XCTAssertTrue(navigationBar.exists, "Should be on the about button")
         XCTAssertTrue(aboutTitleText.exists, "Should be on the about button")
     }
     
@@ -52,6 +54,35 @@ class StackReviewUITests: XCTestCase {
         XCTAssertTrue(map.exists)
         
     }
+    
+    func testPancakeHouseScreenHasScrollView() {
+        tapPancakeHouseButtonIfNeed()
+        
+        let tablesQuery = app.tables
+        tablesQuery/*@START_MENU_TOKEN@*/.cells.staticTexts["Maison des Crêpes"]/*[[".cells.staticTexts[\"Maison des Crêpes\"]",".staticTexts[\"Maison des Crêpes\"]"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/.swipeUp()
+        tablesQuery/*@START_MENU_TOKEN@*/.cells.staticTexts["Ye Olde Pancake"]/*[[".cells.staticTexts[\"Ye Olde Pancake\"]",".staticTexts[\"Ye Olde Pancake\"]"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/.tap()
+        
+        XCTAssertEqual(app.scrollViews.count, 1)
+    }
+    
+    func testHideOrShowCopyrightNoticeOnAboutPage() {
+        tapPancakeHouseButtonIfNeed()
+        
+        let aboutButton = app.navigationBars.buttons["About"]
+        aboutButton.tap()
+        
+        let showHideButton = app.buttons["Show/Hide Copyright Notice"]
+        showHideButton.tap()
+        
+        let axisSwitchButton = app.buttons["Axis Switch"]
+        XCTAssertTrue(axisSwitchButton.exists)
+        axisSwitchButton.tap()
+        
+        showHideButton.tap()
+        XCTAssertFalse(axisSwitchButton.exists)
+        
+    }
+    
     
     func tapPancakeHouseButtonIfNeed() {
         guard horizontalSizeClass != .regular else {
