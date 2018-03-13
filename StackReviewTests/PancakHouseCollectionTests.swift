@@ -13,12 +13,9 @@ class PancakHouseCollectionTests: XCTestCase {
     
     var collection: PancakeHouseCollection!
     
-    
     override func setUp() {
         super.setUp()
-        
         collection = PancakeHouseCollection()
-        
         let bundle = Bundle(for: PancakHouseCollectionTests.self)
         collection.loadPancakeHouses("test_pancake_houses", in: bundle)
     }

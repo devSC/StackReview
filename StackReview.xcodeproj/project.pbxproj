@@ -27,6 +27,7 @@
 		42AFF7421D9868CF00DF841D /* CloudNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AFF7411D9868CF00DF841D /* CloudNetworkManager.swift */; };
 		42AFF7451D98696300DF841D /* CloudNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AFF7441D98696300DF841D /* CloudNetworkError.swift */; };
 		787C1FC91BB3AC5E000B7EA1 /* PancakeHouseCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787C1FC81BB3AC5E000B7EA1 /* PancakeHouseCollection.swift */; };
+		C838FED12057A3710075B989 /* PancakeHouseCollectionIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C838FED02057A3710075B989 /* PancakeHouseCollectionIntegrationTests.swift */; };
 		FE38BE5E2056B7BC00514F57 /* StackReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE38BE5D2056B7BC00514F57 /* StackReviewTests.swift */; };
 		FE38BE692056B86100514F57 /* PancakHouseCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE38BE682056B86100514F57 /* PancakHouseCollectionTests.swift */; };
 		FE38BE6B2056B90600514F57 /* test_pancake_houses.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE38BE6A2056B90600514F57 /* test_pancake_houses.plist */; };
@@ -35,6 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C838FEC92057A29F0075B989 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22A7E5621B3AE0E600F269A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22A7E5691B3AE0E600F269A3;
+			remoteInfo = StackReview;
+		};
 		FE38BE602056B7BD00514F57 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 22A7E5621B3AE0E600F269A3 /* Project object */;
@@ -67,6 +75,9 @@
 		42AFF7411D9868CF00DF841D /* CloudNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudNetworkManager.swift; sourceTree = "<group>"; };
 		42AFF7441D98696300DF841D /* CloudNetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudNetworkError.swift; sourceTree = "<group>"; };
 		787C1FC81BB3AC5E000B7EA1 /* PancakeHouseCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PancakeHouseCollection.swift; sourceTree = "<group>"; };
+		C838FEC42057A29F0075B989 /* StackReviewIntergationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackReviewIntergationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C838FEC82057A29F0075B989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C838FED02057A3710075B989 /* PancakeHouseCollectionIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PancakeHouseCollectionIntegrationTests.swift; sourceTree = "<group>"; };
 		FE38BE5B2056B7BC00514F57 /* StackReviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackReviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE38BE5D2056B7BC00514F57 /* StackReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackReviewTests.swift; sourceTree = "<group>"; };
 		FE38BE5F2056B7BD00514F57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +87,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		22A7E5671B3AE0E600F269A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C838FEC12057A29F0075B989 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -105,6 +123,7 @@
 			children = (
 				22A7E56C1B3AE0E600F269A3 /* StackReview */,
 				FE38BE5C2056B7BC00514F57 /* StackReviewTests */,
+				C838FEC52057A29F0075B989 /* StackReviewIntergationTests */,
 				22A7E56B1B3AE0E600F269A3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -114,6 +133,7 @@
 			children = (
 				22A7E56A1B3AE0E600F269A3 /* StackReview.app */,
 				FE38BE5B2056B7BC00514F57 /* StackReviewTests.xctest */,
+				C838FEC42057A29F0075B989 /* StackReviewIntergationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,6 +222,31 @@
 			name = Networking;
 			sourceTree = "<group>";
 		};
+		C838FEC52057A29F0075B989 /* StackReviewIntergationTests */ = {
+			isa = PBXGroup;
+			children = (
+				C838FECF2057A3360075B989 /* Support Files */,
+				C838FECE2057A32F0075B989 /* Cases */,
+			);
+			path = StackReviewIntergationTests;
+			sourceTree = "<group>";
+		};
+		C838FECE2057A32F0075B989 /* Cases */ = {
+			isa = PBXGroup;
+			children = (
+				C838FED02057A3710075B989 /* PancakeHouseCollectionIntegrationTests.swift */,
+			);
+			path = Cases;
+			sourceTree = "<group>";
+		};
+		C838FECF2057A3360075B989 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C838FEC82057A29F0075B989 /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
 		FE38BE5C2056B7BC00514F57 /* StackReviewTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +302,24 @@
 			productReference = 22A7E56A1B3AE0E600F269A3 /* StackReview.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C838FEC32057A29F0075B989 /* StackReviewIntergationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C838FECB2057A29F0075B989 /* Build configuration list for PBXNativeTarget "StackReviewIntergationTests" */;
+			buildPhases = (
+				C838FEC02057A29F0075B989 /* Sources */,
+				C838FEC12057A29F0075B989 /* Frameworks */,
+				C838FEC22057A29F0075B989 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C838FECA2057A29F0075B989 /* PBXTargetDependency */,
+			);
+			name = StackReviewIntergationTests;
+			productName = StackReviewIntergationTests;
+			productReference = C838FEC42057A29F0075B989 /* StackReviewIntergationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FE38BE5A2056B7BC00514F57 /* StackReviewTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE38BE642056B7BD00514F57 /* Build configuration list for PBXNativeTarget "StackReviewTests" */;
@@ -289,6 +352,12 @@
 						CreatedOnToolsVersion = 7.0;
 						LastSwiftMigration = 0800;
 					};
+					C838FEC32057A29F0075B989 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = B8AN3R9Z2W;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 22A7E5691B3AE0E600F269A3;
+					};
 					FE38BE5A2056B7BC00514F57 = {
 						CreatedOnToolsVersion = 9.2;
 						DevelopmentTeam = B8AN3R9Z2W;
@@ -312,6 +381,7 @@
 			targets = (
 				22A7E5691B3AE0E600F269A3 /* StackReview */,
 				FE38BE5A2056B7BC00514F57 /* StackReviewTests */,
+				C838FEC32057A29F0075B989 /* StackReviewIntergationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -327,6 +397,13 @@
 				22A7E5771B3AE0E600F269A3 /* Assets.xcassets in Resources */,
 				22A7E5751B3AE0E600F269A3 /* Main.storyboard in Resources */,
 				22A7E5851B3AFFFD00F269A3 /* pancake_houses.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C838FEC22057A29F0075B989 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +441,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C838FEC02057A29F0075B989 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C838FED12057A3710075B989 /* PancakeHouseCollectionIntegrationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE38BE572056B7BC00514F57 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -376,6 +461,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C838FECA2057A29F0075B989 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22A7E5691B3AE0E600F269A3 /* StackReview */;
+			targetProxy = C838FEC92057A29F0075B989 /* PBXContainerItemProxy */;
+		};
 		FE38BE612056B7BD00514F57 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 22A7E5691B3AE0E600F269A3 /* StackReview */;
@@ -515,6 +605,67 @@
 			};
 			name = Release;
 		};
+		C838FECC2057A29F0075B989 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8AN3R9Z2W;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "StackReviewIntergationTests/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nihao.StackReviewIntergationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StackReview.app/StackReview";
+			};
+			name = Debug;
+		};
+		C838FECD2057A29F0075B989 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8AN3R9Z2W;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "StackReviewIntergationTests/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nihao.StackReviewIntergationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StackReview.app/StackReview";
+			};
+			name = Release;
+		};
 		FE38BE622056B7BD00514F57 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -593,6 +744,15 @@
 			buildConfigurations = (
 				22A7E57F1B3AE0E600F269A3 /* Debug */,
 				22A7E5801B3AE0E600F269A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C838FECB2057A29F0075B989 /* Build configuration list for PBXNativeTarget "StackReviewIntergationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C838FECC2057A29F0075B989 /* Debug */,
+				C838FECD2057A29F0075B989 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
