@@ -40,6 +40,7 @@ class AboutViewController: UIViewController {
     super.viewDidLoad()    
     contentStackView.isLayoutMarginsRelativeArrangement = true
     contentStackView.layoutMargins = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
+    title = "About"
   }
 
   // MARK: - Actions

@@ -31,6 +31,7 @@
 		C838FED32057AC830075B989 /* MockCloudNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C838FED22057AC830075B989 /* MockCloudNetworkService.swift */; };
 		C838FED42057ADA90075B989 /* MockCloudNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C838FED22057AC830075B989 /* MockCloudNetworkService.swift */; };
 		C838FED62057AEE80075B989 /* test_pancake_houses.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE38BE6A2056B90600514F57 /* test_pancake_houses.plist */; };
+		C838FEDF2057BF4F0075B989 /* StackReviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C838FEDE2057BF4F0075B989 /* StackReviewUITests.swift */; };
 		FE38BE5E2056B7BC00514F57 /* StackReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE38BE5D2056B7BC00514F57 /* StackReviewTests.swift */; };
 		FE38BE692056B86100514F57 /* PancakHouseCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE38BE682056B86100514F57 /* PancakHouseCollectionTests.swift */; };
 		FE38BE6B2056B90600514F57 /* test_pancake_houses.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE38BE6A2056B90600514F57 /* test_pancake_houses.plist */; };
@@ -40,6 +41,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		C838FEC92057A29F0075B989 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22A7E5621B3AE0E600F269A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22A7E5691B3AE0E600F269A3;
+			remoteInfo = StackReview;
+		};
+		C838FEE12057BF4F0075B989 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 22A7E5621B3AE0E600F269A3 /* Project object */;
 			proxyType = 1;
@@ -82,6 +90,9 @@
 		C838FEC82057A29F0075B989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C838FED02057A3710075B989 /* PancakeHouseCollectionIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PancakeHouseCollectionIntegrationTests.swift; sourceTree = "<group>"; };
 		C838FED22057AC830075B989 /* MockCloudNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCloudNetworkService.swift; sourceTree = "<group>"; };
+		C838FEDC2057BF4F0075B989 /* StackReviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackReviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C838FEDE2057BF4F0075B989 /* StackReviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackReviewUITests.swift; sourceTree = "<group>"; };
+		C838FEE02057BF4F0075B989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE38BE5B2056B7BC00514F57 /* StackReviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackReviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE38BE5D2056B7BC00514F57 /* StackReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackReviewTests.swift; sourceTree = "<group>"; };
 		FE38BE5F2056B7BD00514F57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,6 +109,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C838FEC12057A29F0075B989 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C838FED92057BF4F0075B989 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -128,6 +146,7 @@
 				22A7E56C1B3AE0E600F269A3 /* StackReview */,
 				FE38BE5C2056B7BC00514F57 /* StackReviewTests */,
 				C838FEC52057A29F0075B989 /* StackReviewIntergationTests */,
+				C838FEDD2057BF4F0075B989 /* StackReviewUITests */,
 				22A7E56B1B3AE0E600F269A3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -138,6 +157,7 @@
 				22A7E56A1B3AE0E600F269A3 /* StackReview.app */,
 				FE38BE5B2056B7BC00514F57 /* StackReviewTests.xctest */,
 				C838FEC42057A29F0075B989 /* StackReviewIntergationTests.xctest */,
+				C838FEDC2057BF4F0075B989 /* StackReviewUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -260,6 +280,15 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		C838FEDD2057BF4F0075B989 /* StackReviewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C838FEDE2057BF4F0075B989 /* StackReviewUITests.swift */,
+				C838FEE02057BF4F0075B989 /* Info.plist */,
+			);
+			path = StackReviewUITests;
+			sourceTree = "<group>";
+		};
 		FE38BE5C2056B7BC00514F57 /* StackReviewTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +362,24 @@
 			productReference = C838FEC42057A29F0075B989 /* StackReviewIntergationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C838FEDB2057BF4F0075B989 /* StackReviewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C838FEE32057BF4F0075B989 /* Build configuration list for PBXNativeTarget "StackReviewUITests" */;
+			buildPhases = (
+				C838FED82057BF4F0075B989 /* Sources */,
+				C838FED92057BF4F0075B989 /* Frameworks */,
+				C838FEDA2057BF4F0075B989 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C838FEE22057BF4F0075B989 /* PBXTargetDependency */,
+			);
+			name = StackReviewUITests;
+			productName = StackReviewUITests;
+			productReference = C838FEDC2057BF4F0075B989 /* StackReviewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		FE38BE5A2056B7BC00514F57 /* StackReviewTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE38BE642056B7BD00514F57 /* Build configuration list for PBXNativeTarget "StackReviewTests" */;
@@ -371,6 +418,12 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 22A7E5691B3AE0E600F269A3;
 					};
+					C838FEDB2057BF4F0075B989 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = B8AN3R9Z2W;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 22A7E5691B3AE0E600F269A3;
+					};
 					FE38BE5A2056B7BC00514F57 = {
 						CreatedOnToolsVersion = 9.2;
 						DevelopmentTeam = B8AN3R9Z2W;
@@ -395,6 +448,7 @@
 				22A7E5691B3AE0E600F269A3 /* StackReview */,
 				FE38BE5A2056B7BC00514F57 /* StackReviewTests */,
 				C838FEC32057A29F0075B989 /* StackReviewIntergationTests */,
+				C838FEDB2057BF4F0075B989 /* StackReviewUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -418,6 +472,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C838FED62057AEE80075B989 /* test_pancake_houses.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C838FEDA2057BF4F0075B989 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +525,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C838FED82057BF4F0075B989 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C838FEDF2057BF4F0075B989 /* StackReviewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE38BE572056B7BC00514F57 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -481,6 +550,11 @@
 			isa = PBXTargetDependency;
 			target = 22A7E5691B3AE0E600F269A3 /* StackReview */;
 			targetProxy = C838FEC92057A29F0075B989 /* PBXContainerItemProxy */;
+		};
+		C838FEE22057BF4F0075B989 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22A7E5691B3AE0E600F269A3 /* StackReview */;
+			targetProxy = C838FEE12057BF4F0075B989 /* PBXContainerItemProxy */;
 		};
 		FE38BE612056B7BD00514F57 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -682,6 +756,65 @@
 			};
 			name = Release;
 		};
+		C838FEE42057BF4F0075B989 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8AN3R9Z2W;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = StackReviewUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nihao.StackReviewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StackReview;
+			};
+			name = Debug;
+		};
+		C838FEE52057BF4F0075B989 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8AN3R9Z2W;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = StackReviewUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nihao.StackReviewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StackReview;
+			};
+			name = Release;
+		};
 		FE38BE622056B7BD00514F57 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -769,6 +902,15 @@
 			buildConfigurations = (
 				C838FECC2057A29F0075B989 /* Debug */,
 				C838FECD2057A29F0075B989 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C838FEE32057BF4F0075B989 /* Build configuration list for PBXNativeTarget "StackReviewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C838FEE42057BF4F0075B989 /* Debug */,
+				C838FEE52057BF4F0075B989 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
