@@ -47,4 +47,18 @@ class PancakeHouseCollectionIntegrationTests: XCTestCase {
         //then
         waitForExpectations(timeout: 0.1, handler: nil)
     }
+    
+    func testDownloadWebData() {
+        let expection = self.expectation(description: "Download apple.com home page")
+        
+        let url = URL(string: "https://apple.com")!
+        let dataTask = URLSession.shared.dataTask(with: url) { (data, _, _) in
+            
+            XCTAssertNotNil(data, "No data was download");
+            expection.fulfill()
+        }
+        
+        dataTask.resume()
+        wait(for: [expection], timeout: 20)
+    }
 }
